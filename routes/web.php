@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
+
 
 Route::get('/map', function () {
     return view('admin.map');
@@ -25,3 +23,11 @@ Route::get('/map', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['milldeware'=> ['admin', 'auth']], function(){
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+        });
+
+});
