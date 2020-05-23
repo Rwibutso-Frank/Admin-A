@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Dashboard by Creative Tim
+        @yield('title');
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -82,13 +82,13 @@
               <p>User Profile</p>
             </a>
           </li>
-          <li>
+          <li class="active ">
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Table List</p>
             </a>
           </li>
-          <li class="active ">
+          <li>
             <a href="./typography.html">
               <i class="now-ui-icons text_caps-small"></i>
               <p>Typography</p>
@@ -115,7 +115,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Typography</a>
+            <a class="navbar-brand" href="#pablo">Table List</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -168,96 +168,22 @@
         </div>
       </nav>
       <!-- End Navbar -->
+
+
+
       <div class="panel-header panel-header-sm">
       </div>
       <div class="content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="title">Now Ui Table Heading</h5>
-                <p class="category">Created using Montserrat Font Family</p>
-              </div>
-              <div class="card-body">
-                <div class="typography-line">
-                  <h1><span>Header 1</span>The Life of Now Ui Dashboard </h1>
-                </div>
-                <div class="typography-line">
-                  <h2><span>Header 2</span>The Life of Now Ui Dashboard </h2>
-                </div>
-                <div class="typography-line">
-                  <h3><span>Header 3</span>The Life of Now Ui Dashboard </h3>
-                </div>
-                <div class="typography-line">
-                  <h4><span>Header 4</span>The Life of Now Ui Dashboard </h4>
-                </div>
-                <div class="typography-line">
-                  <h5><span>Header 5</span>The Life of Now Ui Dashboard </h5>
-                </div>
-                <div class="typography-line">
-                  <h6><span>Header 6</span>The Life of Now Ui Dashboard </h6>
-                </div>
-                <div class="typography-line">
-                  <p><span>Paragraph</span>
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-                  </p>
-                </div>
-                <div class="typography-line">
-                  <span>Quote</span>
-                  <blockquote>
-                    <p class="blockquote blockquote-primary">
-                      "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
-                      <br>
-                      <br>
-                      <small>
-                        - Noaa
-                      </small>
-                    </p>
-                  </blockquote>
-                </div>
-                <div class="typography-line">
-                  <span>Muted Text</span>
-                  <p class="text-muted">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                  </p>
-                </div>
-                <div class="typography-line">
-                  <span>Primary Text</span>
-                  <p class="text-primary">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...</p>
-                </div>
-                <div class="typography-line">
-                  <span>Info Text</span>
-                  <p class="text-info">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                </div>
-                <div class="typography-line">
-                  <span>Success Text</span>
-                  <p class="text-success">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                </div>
-                <div class="typography-line">
-                  <span>Warning Text</span>
-                  <p class="text-warning">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                  </p>
-                </div>
-                <div class="typography-line">
-                  <span>Danger Text</span>
-                  <p class="text-danger">
-                    I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                </div>
-                <div class="typography-line">
-                  <h2><span>Small Tag</span>
-                    Header with small subtitle <br>
-                    <small>Use "small" tag for the headers</small>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      @yield('content')
+        
       </div>
+
+       
+
+    
+
+
+
       <footer class="footer">
         <div class=" container-fluid ">
           <nav>
@@ -302,6 +228,7 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+    @yield('scripts')
 </body>
 
 </html>
