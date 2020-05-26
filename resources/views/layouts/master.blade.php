@@ -37,8 +37,10 @@
 </head>
 
 <body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="orange">
+  <div class="wrapper " > 
+  
+
+    <div class="sidebar" data-color="gray">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
@@ -47,13 +49,14 @@
           logo
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          <b>Employees MIS</b>
+        <p style="color:pink"> <b>Employees MIS</b></p>
+        
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="./dashboard.html">
+            <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
@@ -77,7 +80,7 @@
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="/user-register">
               <i class="now-ui-icons users_single-02"></i>
               <p>User Profile</p>
             </a>
@@ -85,7 +88,7 @@
           <li class="active ">
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <p style="color:black">Table List</p>
             </a>
           </li>
           <li>
@@ -159,10 +162,10 @@
               <li class="nav-item dropdown">
               
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <i class="now-ui-icons users_single-02"></i>
-                                    {{ Auth::user()->name }}
-                                </a>
-
+                                  <i class="now-ui-icons users_single-02"></i>
+                                      {{ Auth::user()->name }}
+                                  </a>
+  
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -232,12 +235,14 @@
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </script>, Coded by Rwibutso Frank
           </div>
         </div>
       </footer>
     </div>
-  </div>
+  
+  
+ </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>

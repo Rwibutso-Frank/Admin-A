@@ -101,16 +101,7 @@ Administrator | Dashboard
                 
             </tr>
         
-    
-
-    
-        
-            
-        
-    
-
-
-                    
+     
                 </tbody>
             </table>
         </div>
@@ -120,20 +111,6 @@ Administrator | Dashboard
   </div>
   <div class="col-md-12">
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="card card-plain">
     <div class="card-header">
