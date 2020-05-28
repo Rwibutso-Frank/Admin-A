@@ -55,10 +55,10 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li>
+          <li  class="active">
             <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p style="color:black">Dashboard</p>
             </a>
           </li>
           <li>
@@ -74,21 +74,21 @@
             </a>
           </li>
           <li>
-            <a href="./notifications.html">
+            <a href="/about-us">
               <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
+              <p>About Us</p>
             </a>
           </li>
           <li>
             <a href="/user-register">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>Manage Users</p>
             </a>
           </li>
-          <li class="active ">
+          <li>
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p style="color:black">Table List</p>
+              <p>Table List</p>
             </a>
           </li>
           <li>

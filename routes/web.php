@@ -33,5 +33,9 @@ Route::group(['milldeware'=> ['admin', 'auth']], function(){
     Route::get('/user-edit-{id}','admin\DashboardController@editUser');   
     Route::put('/user-update/{id}','admin\DashboardController@updateUser');
     Route::get('/user-delete/{id}','admin\DashboardController@deleteUser');    
+    Route::get('/about-us','admin\AboutusController@index'); 
+    Route::post('/create-about','admin\AboutusController@createAbout');
+        
 
+    
 });
