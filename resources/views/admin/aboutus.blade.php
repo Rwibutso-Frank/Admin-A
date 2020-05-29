@@ -132,10 +132,13 @@ About Us
     </td>
 
 
-<td  class="text-right" >
+<td>
+<form action="{{ url('about-us-delete/'.$data->id) }}" method="POST">
+              {{ csrf_field() }}
+              {{ method_field('DELETE') }}
+<button type="submit" class="btn btn-danger"> DELETE</button>
 
-    <a href="#" class="btn btn-danger">DELETE</a>
-
+</form>
 </td>
             @endforeach
                 </tbody>

@@ -39,6 +39,11 @@ Edit | About us
         <button type="submit" class="btn btn-primary float-right">Update</button>
     
       </form>
+      @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+        </div>
+        @endif
                 </div>
             </div>
         </div> 
