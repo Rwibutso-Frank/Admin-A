@@ -75,7 +75,7 @@
           </li>
           <li>
             <a href="/about-us">
-              <i class="now-ui-icons ui-1_bell-53"></i>
+            <i class="fas fa-address-book"></i></i>
               <p>About Us</p>
             </a>
           </li>

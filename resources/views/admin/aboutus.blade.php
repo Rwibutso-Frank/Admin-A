@@ -4,7 +4,7 @@
 
 @section('title')
 
-Administrator | Dashboard
+About Us 
 
 @endsection
 @section('content')
@@ -14,27 +14,34 @@ Administrator | Dashboard
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">About us</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <form>
+ 
+        <form action="/create-about" method="POST">
+            {{ csrf_field() }}
+        <div class="modal-body">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipient-name" class="col-form-label">Title:</label>
+            <input type="text" name="title" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="recipient-name" class="col-form-label">Sub Title:</label>
+            <input type="text" name="sub_title" class="form-control" id="recipient-name">
           </div>
-        </form>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Description:</label>
+            <textarea name="description" class="form-control" id="message-text"></textarea>
+          </div>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="submit" class="btn btn-primary">save</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -45,6 +52,11 @@ Administrator | Dashboard
         <h4 class="card-title"> About Us
 <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">ADD</button>
 </h4>
+@if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+        </div>
+@endif
 <style>
         .w-10p{
                 width: 10% !important;
@@ -57,12 +69,12 @@ Administrator | Dashboard
             <table class="table">
                 <thead class=" text-primary">
    <b>                 
+      
 <th class="w-10p">
     
-    Title
-
+      id
+    
 </th>
-
 <th class="w-10p">
     
         Title
@@ -108,22 +120,23 @@ Administrator | Dashboard
                              {{ $data->sub_title }}
                             
                         </td>
-                        <th  class="text-right" >
+         
     
                 <td>
                 <div style="height:80px; overflow: hidden;">
                 {{ $data->description }}
                 </div>
                 </td>
-    <a href="#" class="btn btn-success">EDIT</a>
+                <td>
+    <a href="{{ url('about-us/'.$data->id) }}" class="btn btn-success">EDIT</a>
+    </td>
 
-</th>
 
-<th  class="text-right" >
+<td  class="text-right" >
 
     <a href="#" class="btn btn-danger">DELETE</a>
 
-</th>
+</td>
             @endforeach
                 </tbody>
             </table>
