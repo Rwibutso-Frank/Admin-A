@@ -8,12 +8,12 @@ use App\Models\About;
 
 class AboutusController extends Controller
 {
-    public function index(){
+    public function indexAbout(){
         $aboutus = About::all();
         return view('admin.aboutus')->with('aboutus',$aboutus);
         }
 
-        public function store(Request $request){
+        public function storeAbout(Request $request){
             $aboutus = new About;
             $aboutus->title = $request->input('title');
             $aboutus->sub_title = $request->input('sub_title');
@@ -23,10 +23,10 @@ class AboutusController extends Controller
             return redirect('/about-us')->with('status','About us created');
         
         }
-        public function edit(Request $request, $id)
+        public function editAbout($id)
         {
             $edit = About::findOrFail($id);
-            return view('admin.edit-about')->with('edit',$edit);
+             return view('admin.about-edit')->with('edit',$edit);
 
         }
 }
