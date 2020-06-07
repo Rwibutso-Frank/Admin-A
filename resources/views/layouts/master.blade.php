@@ -45,11 +45,12 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          logo
+        <!-- <a href="http://www.creative-tim.com" class="simple-text logo-mini"> -->
+          <h1><img src="file:///C:\Users\hervis\Desktop\logo.png"/>
+          </h1>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        <p style="color:pink"> <b>Employees MIS</b></p>
+        <p style="color:pink"> <b>Shop with us </b></p>
         
         </a>
       </div>

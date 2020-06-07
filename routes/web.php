@@ -24,11 +24,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-    
+
 Route::group(['milldeware'=> ['admin', 'auth']], function(){
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-        }); 
+    }); 
     Route::get('/user-register','admin\DashboardController@registered');
     Route::get('/user-edit-{id}','admin\DashboardController@editUser');   
     Route::put('/user-update/{id}','admin\DashboardController@updateUser');
@@ -38,4 +38,6 @@ Route::group(['milldeware'=> ['admin', 'auth']], function(){
     Route::get('/about-us/{id}','Admin\AboutusController@editAbout');    
     Route::post('/about-update/{id}','Admin\AboutusController@updateAbout');    
     Route::delete('/about-us-delete/{id}','Admin\AboutusController@deleteAbout');
+    Route::match(['get','post'],'add-category','CategoryController@addCategory');
+
 });
