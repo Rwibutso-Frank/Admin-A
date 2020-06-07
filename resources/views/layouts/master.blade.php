@@ -45,8 +45,8 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <!-- <a href="http://www.creative-tim.com" class="simple-text logo-mini"> -->
-          <h1><img src="file:///C:\Users\hervis\Desktop\logo.png"/>
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          <h1>S.W.U
           </h1>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
@@ -63,9 +63,9 @@
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="/add-category">
               <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+              <p>Categories</p>
             </a>
           </li>
           <li>
@@ -213,26 +213,7 @@
 
 
       <footer class="footer">
-        <div class=" container-fluid ">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
+   
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
