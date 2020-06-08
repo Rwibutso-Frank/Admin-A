@@ -21,24 +21,22 @@ add category
 						<h5>Add Category</h5>
 					</div>
 					<div class="widget-content nopadding">
-						<form class="form-horizontal" method="post" action="#" name="add_category" id="basic_validate" novalidate="novalidate">
+						<form class="form-horizontal" method="post" action="{{ url('/add-category') }}" name="add_category" id="add_category" novalidate="novalidate"> {{ csrf_field() }}
 							<div class="control-group">
 								<label class="control-label">Category Name</label>
 								<div class="controls">
-									<input type="text" name="name" id="name">
+									<input type="text" name="category_name" id="category_name">
 								</div>
 							</div>
 							
 							<div class="control-group">
 								<label class="control-label">Description</label>
 								<div class="controls">
-									<input type="text" name="description" id="description">
+									<textarea name="description" id="description"></textarea>
 								</div>
 							</div>
-							
-
 							<div class="control-group">
-								<label class="control-label">URL (Start with http://)</label>
+								<label class="control-label">URL</label>
 								<div class="controls">
 									<input type="text" name="url" id="url">
 								</div>

@@ -19,9 +19,9 @@ About Us
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
- 
-        <form action="/create-about" method="POST">
-            {{ csrf_field() }}
+      
+      <form action="/create-about" method="POST">
+        {{ csrf_field() }}
         <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Title:</label>
@@ -35,12 +35,12 @@ About Us
             <label for="message-text" class="col-form-label">Description:</label>
             <textarea name="description" class="form-control" id="message-text"></textarea>
           </div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">save</button>
-      </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">save</button>
+        </div>
       </form>
     </div>
   </div>
@@ -48,103 +48,103 @@ About Us
 
 
 <div class="card">
-    <div class="card-header">
-        <h4 class="card-title"> About Us
-<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">ADD</button>
-</h4>
-@if (session('status'))
+  <div class="card-header">
+    <h4 class="card-title"> About Us
+      <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">ADD</button>
+    </h4>
+    @if (session('status'))
     <div class="alert alert-success" role="alert">
-        {{ session('status') }}
-        </div>
-@endif
-<style>
-        .w-10p{
-                width: 10% !important;
-        }
-</style>
-
+      {{ session('status') }}
     </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table">
-                <thead class=" text-primary">
-   <b>                 
-      
-<th class="w-10p">
-    
-      id
-    
-</th>
-<th class="w-10p">
-    
-        Title
-    
-</th>
+    @endif
+    <style>
+      .w-10p{
+        width: 10% !important;
+      }
+    </style>
 
-<th class="w-10p">
-    
-        Sub Title
-    
-</th>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class=" text-primary">
+         <b>                 
+          
+          <th class="w-10p">
+            
+            id
+            
+          </th>
+          <th class="w-10p">
+            
+            Title
+            
+          </th>
 
-<th class="w-10p">
-    
-        Description
-    
-</th>
+          <th class="w-10p">
+            
+            Sub Title
+            
+          </th>
 
-        <th class="w-10p">
-    
-        EDIT
-    
-        </th>
-<th class="w-10p">
-        DELETE
-</th>
-</b>
-                </thead>
-                <tbody>
-                @foreach($aboutus as $data)
+          <th class="w-10p">
+            
+            Description
+            
+          </th>
 
-            <tr >
-                        <td >
-                        {{ $data->id }}    
-                        </td>
-                        <td >
-                            
-                        {{ $data->title }}
-                            
-                        </td>
-                        <td >
-                            
-                             {{ $data->sub_title }}
-                            
-                        </td>
+          <th class="w-10p">
+            
+            EDIT
+            
+          </th>
+          <th class="w-10p">
+            DELETE
+          </th>
+        </b>
+      </thead>
+      <tbody>
+        @foreach($aboutus as $data)
+
+        <tr >
+          <td >
+            {{ $data->id }}    
+          </td>
+          <td >
+            
+            {{ $data->title }}
+            
+          </td>
+          <td >
+            
+           {{ $data->sub_title }}
+           
+         </td>
          
-    
-                <td>
-                <div style="height:80px; overflow: hidden;">
-                {{ $data->description }}
-                </div>
-                </td>
-                <td>
-    <a href="{{ url('about-us/'.$data->id) }}" class="btn btn-success">EDIT</a>
-    </td>
+         
+         <td>
+          <div style="height:80px; overflow: hidden;">
+            {{ $data->description }}
+          </div>
+        </td>
+        <td>
+          <a href="{{ url('about-us/'.$data->id) }}" class="btn btn-success">EDIT</a>
+        </td>
 
 
-<td>
-<form action="{{ url('about-us-delete/'.$data->id) }}" method="POST">
-              {{ csrf_field() }}
-              {{ method_field('DELETE') }}
-<button type="submit" class="btn btn-danger"> DELETE</button>
+        <td>
+          <form action="{{ url('about-us-delete/'.$data->id) }}" method="POST">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-danger"> DELETE</button>
 
-</form>
-</td>
-            @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
+          </form>
+        </td>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>
 </div>
 @endsection

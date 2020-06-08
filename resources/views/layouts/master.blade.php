@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-        @yield('title');
+    @yield('title');
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -38,20 +38,20 @@
 
 <body class="">
   <div class="wrapper " > 
-  
+    
 
     <div class="sidebar" data-color="gray">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
+      -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           <h1>S.W.U
           </h1>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        <p style="color:pink"> <b>Shop with us </b></p>
-        
+          <p style="color:pink"> <b>Shop with us </b></p>
+          
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -76,7 +76,7 @@
           </li>
           <li>
             <a href="/about-us">
-            <i class="fas fa-address-book"></i></i>
+              <i class="fas fa-address-book"></i></i>
               <p>About Us</p>
             </a>
           </li>
@@ -119,7 +119,9 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Table List</a>
+            <a class="navbar-brand" href="#pablo"><h3> <p style="font-family:'Courier New'"> Make it easy and shop with us 
+              <span style='font-size:100px;'>&#128522;</span>
+            </p></h3></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -159,29 +161,29 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-             
-              <li class="nav-item dropdown">
               
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  <i class="now-ui-icons users_single-02"></i>
-                                      {{ Auth::user()->name }}
-                                  </a>
-  
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+              <li class="nav-item dropdown">
+                
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  <i class="now-ui-icons users_single-02"></i>
+                  {{ Auth::user()->name }}
+                </a>
+                
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+                </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>
+              </div>
+            </li>
 
 
-                            
+            
                             <!-- <li class="nav-item">
                 <a class="nav-link" href="#pablo">
                   <i class="now-ui-icons users_single-02"></i>
@@ -202,44 +204,44 @@
       <div class="panel-header panel-header-sm">
       </div>
       <div class="content">
-      @yield('content')
+        @yield('content')
         
       </div>
 
-       
+      
 
-    
+      
 
 
 
       <footer class="footer">
-   
-          <div class="copyright" id="copyright">
-            &copy; <script>
-              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Coded by Rwibutso Frank
-          </div>
+       
+        <div class="copyright" id="copyright">
+          &copy; <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>, Coded by Rwibutso Frank
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+  </div>
   
   
- </div>
-  <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
-    @yield('scripts')
+</div>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/core/bootstrap.min.js"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Chart JS -->
+<script src="../assets/js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/demo/demo.js"></script>
+@yield('scripts')
 </body>
 
 </html>

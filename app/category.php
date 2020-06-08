@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class category extends Model
 {
     //
-    prepa
+	protected $fillable = [
+		'name', 'description', 'url',
+	]; 
 }
