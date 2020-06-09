@@ -38,7 +38,7 @@
 
 <body class="">
   <div class="wrapper " > 
-    
+
 
     <div class="sidebar" data-color="gray">
       <!--
@@ -51,7 +51,7 @@
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
           <p style="color:pink"> <b>Shop with us </b></p>
-          
+
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -62,11 +62,14 @@
               <p style="color:black">Dashboard</p>
             </a>
           </li>
-          <li>
-            <a href="/add-category">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Categories</p>
-            </a>
+          <ul>
+            <li class="submenu"><a href="#"><i class="now-ui-icons education_atom"></i><p> <spam>  Categories </spam></p> <span class="label label-important"></span> </a>
+          <ul>
+          <li><a href="/add-category">Add Category</a></li> 
+          <li><a href="/view-category">View Category</a></li> 
+
+          </ul>
+
           </li>
           <li>
             <a href="./map.html">
@@ -161,14 +164,14 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              
+
               <li class="nav-item dropdown">
-                
+
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   <i class="now-ui-icons users_single-02"></i>
                   {{ Auth::user()->name }}
                 </a>
-                
+
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
@@ -183,7 +186,7 @@
             </li>
 
 
-            
+
                             <!-- <li class="nav-item">
                 <a class="nav-link" href="#pablo">
                   <i class="now-ui-icons users_single-02"></i>
@@ -208,14 +211,14 @@
         
       </div>
 
-      
 
-      
+
+
 
 
 
       <footer class="footer">
-       
+
         <div class="copyright" id="copyright">
           &copy; <script>
             document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))

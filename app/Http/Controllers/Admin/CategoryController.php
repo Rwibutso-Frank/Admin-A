@@ -24,11 +24,11 @@ class CategoryController extends Controller
     	}
         return view('admin.categories.add_category')->with('status','Category created successf');
 
-    }
 
-    public function viewCategory(){
+	}
+	
+	public function viewCategory(){
 
-      return view('admin.categories.view_categories');
-
+        return view('admin.categories.view_category');
     }
 }

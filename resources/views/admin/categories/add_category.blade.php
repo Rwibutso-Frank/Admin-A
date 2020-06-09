@@ -8,6 +8,7 @@ add category
 
 @section('content')
 
+
 <div id="content">
 	<div id="content-header">
 		<div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Categories</a> <a href="#" class="current">Add Category</a> </div>
@@ -22,6 +23,7 @@ add category
 					</div>
 					<div class="widget-content nopadding">
 						<form class="form-horizontal" method="post" action="{{ url('/add-category') }}" name="add_category" id="add_category" novalidate="novalidate"> {{ csrf_field() }}
+							
 							<div class="control-group">
 								<label class="control-label">Category Name</label>
 								<div class="controls">
@@ -45,6 +47,12 @@ add category
 								<input type="submit" value="Add Category" class="btn btn-success">
 							</div>
 						</form>
+						@if (session('status'))
+						<div class="alert alert-success" role="alert">
+							{{ session('status') }}
+						</div>
+						@endif
+
 					</div>
 				</div>
 			</div>
