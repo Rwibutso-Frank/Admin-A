@@ -39,5 +39,5 @@ Route::group(['milldeware'=> ['admin', 'auth']], function(){
     Route::post('/about-update/{id}','Admin\AboutusController@updateAbout');    
     Route::delete('/about-us-delete/{id}','Admin\AboutusController@deleteAbout');
     Route::match(['get','post'],'/add-category','CategoryController@addCategory');
-    Route::get('/view-category','CategoryController@viewCategory');
+    Route::get('/view-category','CategoryController@viewCategories');
 });

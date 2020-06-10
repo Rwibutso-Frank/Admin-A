@@ -27,8 +27,11 @@ class CategoryController extends Controller
 
 	}
 	
-	public function viewCategory(){
-
-        return view('admin.categories.view_category');
+	public function viewCategories(){
+        
+        $categories = Category::get();
+        $categories = json_decode(json_encode($categories));
+         echo "<pre>"; print_r($categories); die;
+         return view('admin.categories.view_category')->with(compact('categories'));
     }
 }
