@@ -47,7 +47,7 @@ View Category
 									<td>{{ $category->description }}</td>
 									<td>{{ $category->url }}</td>
 									<td class="center">
-										<a href="#" class="btn btn-primary btn-mini">Edit</a> 
+										<a href="{{ url('edit_category/'.$category->id) }}" class="btn btn-primary btn-mini">Edit</a> 
 										<a href="#" class="btn btn-danger btn-mini">Delete</a>
 									</td>
 								</tr>

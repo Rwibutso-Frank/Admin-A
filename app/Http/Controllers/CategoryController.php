@@ -33,4 +33,15 @@ class CategoryController extends Controller
          return view('admin.categories.view_category')->with(compact('categories'));
  
     }
+
+    public function editCategory(Request $request, $id = null){
+
+                echo "test"; die;
+             $edit = Category::findOrFail($id);
+            return view('admin.categories.edit_category');
+            // ->with('edit', $edit);
+
+
+
+    }
 }
